@@ -2,13 +2,16 @@
 <html>
   <head>
     <script>
-      function myFunction() {
-        document.getElementById("demo").innerHTML = "Paragraph changed.";
+      function replace() {
+        var el = document.querySelector('#replace');
+		var newel = document.createElement('img');
+		newel.innerHTML = '<img src="mechaknight.png" height="200" width="200"/>';
+		el.parentNode.replaceChild(newel, el);
       }
       </script>
   </head>
 <body>
   <p>vroom vroom</p>
-  <img src="mechaknight.png" height="200" width="200"/>
+  <img src="mechaknight.png" id="replace" height="200" width="200" onclick="replace()"/>
 </body>
 </html>
