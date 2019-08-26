@@ -5,13 +5,17 @@
       function replace() {
 		var el = document.querySelector('#replace');
 		var newel = document.createElement('div');
-		newel.innerHTML = '<img src="sharenasad.png" height="200" width="200"/>';
+		newel.innerHTML = '<img src="biggreenbutton.png"/>';
 		el.parentNode.replaceChild(newel, el);
       }
       </script>
+	  <meta charset = "UTF-8">
+		<title>press the button</title>
+		<link rel = "stylesheet"
+			type = "text/css"
+			href = "stylesheet.css" />
   </head>
 <body>
-  <p>vroom vroom</p>
-  <img src="mechaknight.png" id="replace" height="200" width="200" onclick="replace()"/>
+  <div id="replace"><img src="bigredbutton.png" onclick="replace()"/></div>
 </body>
 </html>
