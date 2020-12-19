@@ -1,0 +1,53 @@
+.piss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.poo {
+  position: absolute;
+  top: 300px;
+  width: 600px
+}
+
+.one {
+  position: absolute;
+  margin-top: 0px;
+  width: 200px;
+}
+
+.two {
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 200px;
+  width: 200px;
+}
+
+.three {
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 400px;
+  width: 200px;
+}
+
+
+h1 {
+  font-family: verdana;
+  font-size: 200%;
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  color: black;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-left: -50px;
+}
