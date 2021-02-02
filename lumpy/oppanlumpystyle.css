@@ -1,0 +1,47 @@
+.piss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.poo {
+  position: absolute;
+  top: 300px;
+  width: 600px
+}
+
+.poo2 {
+  position: absolute;
+  top: 800px;
+  width: 1000px
+}
+
+table, td{
+    font-size: 10px;
+	border: 1px solid white;
+}
+
+span {
+	color: grey;
+}
+
+h1 {
+  font-family: verdana;
+  font-size: 200%;
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  color: black;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-left: -50px;
+}
