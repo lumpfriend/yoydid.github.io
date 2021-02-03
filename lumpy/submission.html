@@ -20,11 +20,10 @@
 <body>
   <div class="piss" onclick="document.getElementById('epiquemusique').play()">
   
-  <form enctype="multipart/form-data" action="uploader.php" method="POST">
-  <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-  <input name="uploadedfile" type="file" /><br />
-  <input type="submit" value="Upload File" />
-  </form>
+  <div id="filesubmit">
+  <input type="file" class="file-select" accept="image/*"/>
+  <button class="file-submit">SUBMIT</button>
+  </div>
   
   <pre style="color:white;align:center">
   
@@ -68,10 +67,57 @@
     <td><span>Aa</span></td>
     <td><span>Aa</span></td>
   </table>
-  <br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/>
   <p style="text-align:right;">♫click for cool music♫........</p>
   <audio id="epiquemusique" src = "" loop> what do you hear? </audio>
   </div>
   </div>
+  
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB-AO8m59TTzXSxaTiQ1jSsge7QD7PKv8I",
+    authDomain: "new-project-86e69.firebaseapp.com",
+    projectId: "new-project-86e69",
+    storageBucket: "new-project-86e69.appspot.com",
+    messagingSenderId: "892592341438",
+    appId: "1:892592341438:web:42daa831dfa196bcd739ef"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  const storageService = firebase.storage();
+  const storageRef = storageService.ref();
+  
+  document.querySelector('.file-select').addEventListener('change', handleFileUploadChange);
+  document.querySelector('.file-submit').addEventListener('click', handleFileUploadSubmit);
+  
+  let selectedFile;
+  handleFileUploadChange(e) {
+    selectedFile = e.target.files[0];
+  }
+  
+  handleFileUploadSubmit(e) {
+  const uploadTask =
+  storageRef.child(`submissions/${selectedFile.name}`).put(selectedFile);
+  //create a child directory called images, and place the file inside this directory
+  
+  uploadTask.on('state_changed', (snapshot) => {
+  // Observe state change events such as progress, pause, and resume
+  }, (error) => {
+    // Handle unsuccessful uploads
+    console.log(error);
+  }, () => {
+     // Do something once upload is complete
+     console.log('success');
+  });
+  }
+</script>
 </body>
 </html>
