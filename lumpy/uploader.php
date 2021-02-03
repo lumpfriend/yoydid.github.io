@@ -1,7 +1,7 @@
 <?php
 
 // Where the file is going to be placed 
-$target_path = "../submissions/";
+$target_path = "submissions/";
 
 /* Add the original filename to our target path.  
 Result is "uploads/filename.extension" */
