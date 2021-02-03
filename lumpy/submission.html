@@ -1,7 +1,3 @@
-<!-- Hi there friend! You're so cool for looking here,
-that I'll give you permission to see something special:
-https://imgur.com/gallery/hcLzI9w -->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -23,6 +19,12 @@ https://imgur.com/gallery/hcLzI9w -->
   </style>
 <body>
   <div class="piss" onclick="document.getElementById('epiquemusique').play()">
+  
+  <form enctype="multipart/form-data" action="uploader.php" method="POST">
+  <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
+  Choose a file to upload: <input name="uploadedfile" type="file" /><br />
+  <input type="submit" value="Upload File" />
+  </form>
   
   <pre style="color:white;align:center">
   
@@ -68,7 +70,7 @@ https://imgur.com/gallery/hcLzI9w -->
   </table>
   <br/><br/><br/><br/><br/><br/><br/><br/>
   <p style="text-align:right;">♫click for cool music♫........</p>
-  <audio id="epiquemusique" src = "deluxe/pyrebg.mp3" loop> what do you hear? </audio>
+  <audio id="epiquemusique" src = "" loop> what do you hear? </audio>
   </div>
   </div>
 </body>
