@@ -76,8 +76,8 @@
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- TODO: Add SDKs for Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-storage.js"></script>
 
 <script>
   // Your web app's Firebase configuration
@@ -91,7 +91,9 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  
+</script>
+
+<script>
   const storageService = firebase.storage();
   const storageRef = storageService.ref();
   
@@ -119,5 +121,10 @@
   });
   }
 </script>
+
+<!-- sure hope im doing this right -->
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<script src="submission.js"></script>
 </body>
 </html>
